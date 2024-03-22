@@ -1,8 +1,8 @@
 #include "buffer.h"
 
-Buffer::Buffer(int initBuffSize): buffer_(initBuffSize), readPos_(0), writePos_(0) {}
+Buffer::Buffer(int initBuffSize): buffer_(initBuffSize), readPos_(0), writePos_(0) {}    //构造函数，默认初始缓冲区大小是1024，构造函数的初始化列表
 
-size_t Buffer::WritableBytes() const{
+size_t Buffer::WritableBytes() const{                                                    //
     return buffer_.size() - writePos_;
 }  
 
